@@ -12,11 +12,12 @@ header {
 }
 header .navbar {
   display: flex;
-  align-content: center;
+  /* align-content: center; */
+  align-items: center;
   justify-content: space-between;
 }
 .navbar > .logo {
-  margin: 0px 35px;
+  margin: 0 40px;
 }
 .navlinks {
   margin: 20px 38px;
@@ -51,7 +52,19 @@ header .navbar {
   color: black;
 }
 main {
-  background-color: chocolate;
+  /* background-color: chocolate; */
+}
+.carousel {
+  height: 55vh;
+  background-image: url(images/business-meeting-2.png);
+  background-size: 1536px;
+  background-position-y: -250px;
+  background-repeat: no-repeat;
+  background-color: white !important;
+  opacity: 25%;
+}
+.infosection {
+  color: black;
 }
 footer {
   background-color: darkred;
