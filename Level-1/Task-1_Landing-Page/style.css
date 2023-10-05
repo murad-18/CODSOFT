@@ -5,10 +5,12 @@
   font-family: "Kanit", sans-serif;
 }
 body {
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(219, 219, 189);
 }
 :root {
   --primary: rgb(255 255 38);
+  --secondary: rgb(255, 255, 200);
+  --third: rgb(130, 130, 98);
 }
 /* .container {
   background-color: antiquewhite;
@@ -59,9 +61,9 @@ header .navbar {
 }
 .signLinks > button {
   padding: 4px 18px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(43, 43, 43);
-  color: rgb(248, 248, 248);
+  border: 1px solid rgb(255 255 38);
+  background-color: var(--third);
+  color: rgb(255 255 38);
   font-size: 16px;
   border-radius: 9px;
   cursor: pointer;
@@ -69,9 +71,9 @@ header .navbar {
 .subscribe > button {
   margin-top: 4px;
   padding: 4px 54px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(43, 43, 43);
-  color: rgb(248, 248, 248);
+  border: 1px solid rgb(255 255 38);
+  background-color: var(--third);
+  color: rgb(255 255 38);
   font-size: 16px;
   border-radius: 9px;
   cursor: pointer;
@@ -101,7 +103,7 @@ header .navbar {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%; /* Adjust the height as needed for the dissolve effect */
+  height: 100%;
   background: linear-gradient(
     360deg,
     rgba(0, 0, 0, 0) 0%,
@@ -136,10 +138,11 @@ header .navbar {
   margin: 22px 0;
 }
 .buttons > button {
-  padding: 4px 18px;
-  border: 2px solid rgb(15, 15, 15);
-  background-color: rgb(255, 255, 255);
-  color: rgb(36, 36, 36);
+  margin-top: 4px;
+  padding: 4px 54px;
+  border: 1px solid var(--primary);
+  background-color: rgb(130, 130, 98);
+  color: var(--primary);
   font-size: 16px;
   border-radius: 9px;
   cursor: pointer;
@@ -174,6 +177,61 @@ header .navbar {
   border-radius: 10px;
   padding: 30px;
   background-color: rgb(255 255 232);
+}
+.popular {
+  display: flex;
+  flex-direction: column;
+}
+.popular > h1 {
+  margin: 30px 0px;
+  text-align: center;
+  color: rgb(219, 219, 189);
+  background-color: var(--third);
+  height: 7vh;
+}
+.popularcards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  /* border-radius: 10px; */
+  position: relative;
+  padding: 0 2.5rem;
+  cursor: pointer;
+}
+.cardimage {
+  border-radius: 10px;
+  height: 320px;
+  width: 220px;
+  /* background-color: rgb(220, 164, 90); */
+}
+.animeinfo {
+  position: absolute;
+  width: 219px;
+  top: 40px;
+  /* bottom: 320px; */
+  left: 60px;
+  background-color: rgb(130, 130, 98, 0.5);
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: none;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.cardimage:hover ~ .animeinfo {
+  display: block;
+  opacity: 0;
+}
+.animeinfo:hover {
+  display: block;
+}
+.epinfo {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
 }
 footer {
   background-color: darkred;
