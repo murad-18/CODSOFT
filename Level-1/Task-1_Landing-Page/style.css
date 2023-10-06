@@ -31,9 +31,8 @@ header .navbar {
   margin: 0 40px;
   font-size: 36px;
 }
-.navbar > .navlogo > a {
-  text-decoration: none;
-  color: var(--primary);
+.navbar > .navlogo > img {
+  width: 200px;
 }
 .navlinks {
   margin: 20px 38px;
@@ -97,8 +96,22 @@ header .navbar {
   z-index: -1;
   top: 0;
   opacity: 0.6;
+  backdrop-filter: blur(100px);
 }
-
+.faded {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(219, 219, 189, 1) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
 .carousel::after {
   content: "";
   position: absolute;
@@ -197,7 +210,7 @@ header .navbar {
 .cards {
   /* border-radius: 10px; */
   position: relative;
-  padding: 0 2.5rem;
+  padding: 0 2rem;
   cursor: pointer;
 }
 .cardimage {
@@ -233,6 +246,27 @@ header .navbar {
   font-size: 14px;
   justify-content: space-between;
 }
+.popularcards > img {
+  width: 50px;
+  cursor: pointer;
+  background-color: var(--third);
+  border-radius: 25px;
+}
+.cards > h4 {
+  background-color: var(--third);
+  padding: 4px 16px;
+  border-radius: 10px;
+  color: var(--secondary);
+  letter-spacing: 3px;
+}
+.upcoming > h1 {
+  margin: 30px 0px;
+  text-align: center;
+  color: rgb(219, 219, 189);
+  background-color: var(--third);
+  height: 7vh;
+}
 footer {
   background-color: darkred;
+  color: #5f6379;
 }
