@@ -368,8 +368,8 @@ textarea {
   padding: 20px;
   margin: 0 8rem;
 }
-footer {
-}
+/* footer {
+} */
 .footerlinks {
   background-color: var(--third);
   /* height: 10vh; */
