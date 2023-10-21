@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Source+Code+Pro&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: var(--primary);
   /* font-family: 'Source Code Pro', monospace; */
 }
 :root {
@@ -13,20 +14,37 @@ body {
 }
 .container {
   /* background-color: antiquewhite; */
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary);
+  height: 100%;
 }
+.homelogo {
+  width: 68px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+a#skills {
+  scroll-behavior: smooth;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--rest);
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 .logo {
   margin: 12px 24px;
+  font-size: 24px;
+  cursor: pointer;
   /* background-color: rgb(255, 225, 185); */
 }
 .navbar {
   display: flex;
-  /* background-color: rgb(255, 225, 185); */
+  /* background-color: --; */
   height: 10vh;
   align-items: center;
 }
@@ -36,6 +54,14 @@ body {
 .navbar > ul > li {
   list-style: none;
   padding: 0px 18px;
+}
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: var(--primary);
+}
+.navbar > ul > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .navbar > button {
   margin: 18px;
@@ -50,6 +76,7 @@ body {
 }
 .mydetails {
   margin: 100px 25px;
+  margin-left: 5em;
 }
 .mydetails > div {
   margin: 25px 0;
@@ -69,12 +96,14 @@ body {
 .morebutton > button {
   padding: 8px 24px;
   margin: 12px 8px;
+  font-size: 18px;
 }
 .aboutme > img {
   width: 400px;
   background-color: #015c56;
-  border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
-  margin: 120px;
+  border-radius: 94% 6% 94% 6%/95% 5% 95% 5%;
+  margin-right: 10rem;
+  opacity: 0.6;
   transform: scaleX(-1);
   animation: border-radius-animation 2s linear 1s alternate;
   transition: border-radius 1s ease-in-out;
@@ -84,13 +113,13 @@ body {
 }
 @keyframes border-radius-animation {
   0% {
-    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+    border-radius: 94% 6% 94% 6%/95% 5% 95% 5%;
   }
   50% {
     border-radius: 16px;
   }
   100% {
-    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+    border-radius: 94% 6% 94% 6%/95% 5% 95% 5%;
   }
 }
 
@@ -130,6 +159,7 @@ body {
 .skillset-left > .strips {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--primary);
   color: var(--rest);
   width: 350px;
@@ -141,6 +171,7 @@ body {
 .skillset-right > .strips {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--secondary);
   color: var(--primary);
   width: 350px;
@@ -152,6 +183,7 @@ body {
 .projects {
   display: flex;
   flex-direction: column;
+  margin: 4em 0;
   color: var(--rest);
 }
 .projectsheader {
@@ -186,20 +218,90 @@ body {
   font-size: 22px;
   font-weight: bold;
 }
+.last-section {
+  background: linear-gradient(180deg, rgba(40, 105, 101, 0), #92fff8);
+  /* height: 100%; */
+}
 .resume {
   color: var(--rest);
+  display: flex;
+  margin: 4em 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.resume > h1 {
+  color: var(--secondary);
+}
+.resumebuttons {
+  margin: 3em 0;
+}
+.resumebuttons > button {
+  padding: 14px 150px;
+  margin: 0px 100px;
+  font-size: 26px;
 }
 .contactme {
   color: var(--rest);
+  display: flex;
+  flex-direction: column;
+}
+.contactme > h1 {
+  text-align: center;
+  color: var(--secondary);
+}
+.contactinput > form {
+  display: flex;
+  flex-direction: column;
+}
+.contactinput > form > input {
+  margin: 2em 18em;
+  padding: 16px 12px;
+  font-family: "Source Code Pro", monospace;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+}
+.contactinput > form > textarea {
+  margin: 2em 18em;
+  font-family: "Source Code Pro", monospace;
+  padding: 12px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+}
+.contactme > button {
+  margin: auto auto;
+  padding: 8px 38px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .footer {
   color: var(--rest);
+  /* margin: 4em 0; */
+}
+.contactlogo {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  margin: 6em 16em 2em 16em;
+}
+.contactlogo > img {
+  width: 68px;
+}
+.contactinfo {
+  color: var(--primary);
+  margin: 2em;
+  font-family: "Source Code Pro", monospace;
+}
+.rights {
+  color: var(--primary);
+  text-align: center;
+  padding: 0 0 2em 0;
 }
 .buttons {
   /* margin: 12px; */
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid var(--secondary);
+  border: 2px solid var(--primary);
   background-color: var(--secondary);
   color: var(--primary);
   font-family: "Source Code Pro", monospace;

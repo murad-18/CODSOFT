@@ -8,20 +8,23 @@
   </head>
   <body>
     <div class="container">
+      <a href="#top" class="topClass">
+        <img class="homelogo" src="images/up-arrow.png" alt="" />
+      </a>
       <div class="header">
         <div class="logo">My Portfolio</div>
         <div class="navbar">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contactme">Contact Me</a></li>
           </ul>
           <button type="button" class="buttons">Resume</button>
         </div>
       </div>
-      <div class="aboutme">
+      <div class="aboutme" id="about">
         <div class="mydetails">
           <div class="greet">Hello, My Name Is</div>
           <div class="name">Murad Ahmad</div>
@@ -38,52 +41,54 @@
             <button class="buttons" type="button">Learn More</button>
           </div>
         </div>
-        <img class="mypic" src="/images/me-img.png" />
+        <img class="mypic" src="images/me-img-2.webp " />
       </div>
-      <div class="skills">
+      <div class="skills" id="skills">
         <h1 class="skillheader"><span class="headerspan">Ski</span>lls</h1>
         <div class="skillset-left">
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">Web Development</div>
+            <img src="images/web-dev-logo.png" alt="" class="skilllogo" />
           </div>
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">Web Design</div>
+            <img src="images/web-design.png" alt="" class="skilllogo" />
           </div>
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">C++</div>
+            <img src="images/C++-logo.png" alt="" class="skilllogo" />
           </div>
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">Python</div>
+            <img src="images/py-logo.png" alt="" class="skilllogo" />
           </div>
         </div>
         <div class="skillset-right">
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">Artificial Intelligence</div>
+            <img src="images/AI-logo.png" alt="" class="skilllogo" />
           </div>
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">Machine Learning</div>
+            <img src="images/ML-logo.png" alt="" class="skilllogo" />
           </div>
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">Deep Learning</div>
+            <img src="images/DL-logo.png" alt="" class="skilllogo" />
           </div>
           <div class="strips">
-            <div class="skillname">Name</div>
-            <img src="" alt="" class="skilllogo" />
+            <div class="skillname">
+              Numpy, Pandas, Scikit-Learn, OpenCV, Tensorflow
+            </div>
+            <img src="images/frameworks-logo.png" alt="" class="skilllogo" />
           </div>
         </div>
       </div>
-      <div class="projects">
+      <div class="projects" id="projects">
         <h1 class="projectsheader">My Projects Showcase</h1>
         <div class="projectcard">
           <img
-            src="/images/validateEmAll.png"
+            src="images/validateEmAll.png"
             alt="ValidateEm-All"
             class="projectimg"
           />
@@ -100,7 +105,7 @@
         </div>
         <div class="projectcard">
           <img
-            src="/images/infinty-watch.png"
+            src="images/infinty-watch.png"
             alt="infinty-watch"
             class="projectimg"
           />
@@ -116,7 +121,7 @@
           </div>
         </div>
         <div class="projectcard">
-          <img src="/images/yoloV8.png" alt="YOLOv8" class="projectimg" />
+          <img src="images/yoloV8.png" alt="YOLOv8" class="projectimg" />
           <div class="projectdetail">
             <h1>YOLOv8 Tracking</h1>
             <p>
@@ -129,39 +134,59 @@
         </div>
         <button class="buttons" type="button">View More Projects</button>
       </div>
-      <div class="resume">
-        <h1>Download Resume</h1>
-        <div class="buttons">
-          <button class="buttons" type="button">Download</button>
-          <button class="buttons" type="button">Preview</button>
-        </div>
-      </div>
-      <div class="contactme">
-        <h1>Contact Me</h1>
-        <div class="contactinput"></div>
-        <button class="buttons" type="submit">Submit</button>
-      </div>
-      <div class="footer">
-        <div class="contactlogo">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-        </div>
-        <div class="contactinfo">
-          <div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est,
-            pariatur?
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
-            consequatur.
+      <div class="last-section">
+        <div class="resume">
+          <h1 class="resumeheader">Download Resume</h1>
+          <div class="resumebuttons">
+            <button class="buttons" type="button">Download</button>
+            <button class="buttons" type="button">Preview</button>
           </div>
         </div>
-        <div class="rights">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis
-          rem ea nam quos dolorum doloribus accusamus adipisci facere quod?
-          Dicta odit accusamus veniam soluta!
+        <div class="contactme" id="contactme">
+          <h1>Contact Me</h1>
+          <div class="contactinput">
+            <form action="#">
+              <input
+                type="text"
+                name="your-name"
+                placeholder="Enter Your Name"
+              />
+              <textarea
+                name="feedback"
+                cols="30"
+                rows="10"
+                placeholder="Share your problem or work with me"
+              ></textarea>
+            </form>
+          </div>
+          <button class="buttons" type="submit">Submit</button>
+        </div>
+        <div class="footer">
+          <div class="contactlogo">
+            <img
+              src="images/github.png"
+              alt="https://www.flaticon.com/authors/ruslan-babkin"
+            />
+            <img
+              src="images/linkedin.png"
+              alt="https://www.flaticon.com/authors/ruslan-babkin"
+            />
+            <img
+              src="images/facebook.png"
+              alt="https://www.flaticon.com/authors/ruslan-babkin"
+            />
+            <img
+              src="images/twitter.png"
+              alt="https://www.flaticon.com/authors/ruslan-babkin"
+            />
+          </div>
+          <div class="contactinfo">
+            <div>Contact Number : +92-322-4580717</div>
+            <div>E-mail : muradatfc26@gmail.com</div>
+          </div>
+          <div class="rights">
+            My Personal portfolio site | CopyRights Belongs To Me ©️
+          </div>
         </div>
       </div>
     </div>
