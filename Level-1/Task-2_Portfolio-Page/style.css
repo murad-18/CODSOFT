@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Source+Code+Pro&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary);
+  /* font-family: 'Source Code Pro', monospace; */
+}
+:root {
+  --primary: #004d48;
+  --secondary: #92fff8;
+  --rest: #d5fdff;
+}
+.container {
+  /* background-color: antiquewhite; */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--rest);
+}
+.logo {
+  margin: 12px 24px;
+  /* background-color: rgb(255, 225, 185); */
+}
+.navbar {
+  display: flex;
+  /* background-color: rgb(255, 225, 185); */
+  height: 10vh;
+  align-items: center;
+}
+.navbar > ul {
+  display: flex;
+}
+.navbar > ul > li {
+  list-style: none;
+  padding: 0px 18px;
+}
+.navbar > button {
+  margin: 18px;
+}
+.aboutme {
+  /* background-color: rgb(252, 217, 171); */
+  color: var(--rest);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+}
+.mydetails {
+  margin: 100px 25px;
+}
+.mydetails > div {
+  margin: 25px 0;
+}
+.greet {
+  font-family: "Source Code Pro", monospace;
+}
+.name {
+  font-size: 62px;
+}
+.occupation {
+  font-size: 62px;
+}
+.bio {
+  font-size: 24px;
+}
+.morebutton > button {
+  padding: 8px 24px;
+  margin: 12px 8px;
+}
+.aboutme > img {
+  width: 400px;
+  background-color: #015c56;
+  border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+  margin: 120px;
+  transform: scaleX(-1);
+  animation: border-radius-animation 2s linear 1s alternate;
+  transition: border-radius 1s ease-in-out;
+}
+.aboutme > img:hover {
+  border-radius: 16px;
+}
+@keyframes border-radius-animation {
+  0% {
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+  }
+  50% {
+    border-radius: 16px;
+  }
+  100% {
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+  }
+}
+
+.skills {
+  display: grid;
+  color: var(--rest);
+  /* flex-direction: column; */
+  column-gap: 200px;
+  /* margin: 24px 0px; */
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--secondary) 50%, var(--primary) 50%);
+  grid-template-areas:
+    "header header"
+    "left-set right-set";
+}
+.skillheader {
+  text-align: center;
+  font-size: 62px;
+  grid-area: header;
+  margin: 0;
+  letter-spacing: 8px;
+}
+.headerspan {
+  color: var(--primary);
+}
+.skillset-left {
+  display: grid;
+  grid-area: left-set;
+  gap: 30px;
+}
+.skillset-right {
+  display: grid;
+  grid-area: right-set;
+  gap: 30px;
+}
+.skillset-left > .strips {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--rest);
+  width: 350px;
+  height: 70px;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 12px;
+}
+.skillset-right > .strips {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary);
+  color: var(--primary);
+  width: 350px;
+  height: 70px;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 12px;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  color: var(--rest);
+}
+.projectsheader {
+  text-align: center;
+  font-size: 62px;
+}
+.projectcard {
+  display: flex;
+  padding: 20px 24px;
+}
+.projectcard > img {
+  width: 700px;
+  border-radius: 8px;
+}
+.projectdetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projectdetail > h1 {
+  text-decoration: underline;
+}
+.projectdetail > p {
+  margin: auto 100px;
+}
+.projectdetail > button {
+  padding: 8px 18px;
+  font-size: 18px;
+}
+.projects > button {
+  margin: auto auto;
+  font-size: 22px;
+  font-weight: bold;
+}
+.resume {
+  color: var(--rest);
+}
+.contactme {
+  color: var(--rest);
+}
+.footer {
+  color: var(--rest);
+}
+.buttons {
+  /* margin: 12px; */
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+}
