@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: olivedrab;
+  background-color: #ff8b7e;
 }
 .container {
   display: flex;
@@ -99,6 +99,7 @@ body {
   letter-spacing: 1px;
   box-shadow: #88291f 0px 7px 2px, #000 0px 8px 5px;
   font-size: 42px;
+  cursor: pointer;
 }
 
 .calBody button:hover {
