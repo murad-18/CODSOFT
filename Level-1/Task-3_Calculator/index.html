@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,70 +7,35 @@
   </head>
   <body>
     <div class="container">
+      <h1>Murad's Calculator</h1>
       <div class="calBody">
         <div class="display">
           <input type="text" name="equation" id="equation" />
           <input type="text" name="result" id="result" />
         </div>
         <div class="calbuttons">
-          <div class="numbers">
-            <button id="seven" class="numbuttons" onclick="display('7')">
-              7
-            </button>
-            <button id="eight" class="numbuttons" onclick="display('8')">
-              8
-            </button>
-            <button id="nine" class="numbuttons" onclick="display('9')">
-              9
-            </button>
-            <button id="foure" class="numbuttons" onclick="display('4')">
-              4
-            </button>
-            <button id="five" class="numbuttons" onclick="display('5')">
-              5
-            </button>
-            <button id="six" class="numbuttons" onclick="display('6')">
-              6
-            </button>
-            <button id="one" class="numbuttons" onclick="display('1')">
-              1
-            </button>
-            <button id="two" class="numbuttons" onclick="display('2')">
-              2
-            </button>
-            <button id="three" class="numbuttons" onclick="display('3')">
-              3
-            </button>
-            <button id="allclear" class="numbuttons" onclick="clearall()">
-              AC
-            </button>
-            <button id="zero" class="numbuttons" onclick="display('0')">
-              0
-            </button>
-            <button id="point" class="numbuttons" onclick="display('.')">
-              .
-            </button>
-          </div>
-          <div class="operations">
-            <button onclick="display('/')" id="divide" class="opbuttons">
-              /
-            </button>
-            <button onclick="display('-')" id="minus" class="opbuttons">
-              -
-            </button>
-            <button onclick="display('*')" id="multiply" class="opbuttons">
-              *
-            </button>
-            <button
-              onclick="display('+')"
-              id="plus"
-              class="opbuttons"
-              onclick="addition()"
-            >
-              +
-            </button>
-            <button id="calculate" onclick="calculate()">=</button>
-          </div>
+          <button class="opButtons" onclick="display('%')">%</button>
+          <button class="opButtons" onclick="clearall()">AC</button>
+          <button id="remove" class="opButtons" onclick="remove()">
+            <img src="remove.png" alt="" width="44px" />
+          </button>
+          <button class="opButtons" onclick="display('/')">/</button>
+          <button class="opButtons" onclick="display('7')">7</button>
+          <button class="opButtons" onclick="display('8')">8</button>
+          <button class="opButtons" onclick="display('9')">9</button>
+          <button class="opButtons" onclick="display('*')">*</button>
+          <button class="opButtons" onclick="display('4')">4</button>
+          <button class="opButtons" onclick="display('5')">5</button>
+          <button class="opButtons" onclick="display('6')">6</button>
+          <button class="opButtons" onclick="display('-')">-</button>
+          <button class="opButtons" onclick="display('1')">1</button>
+          <button class="opButtons" onclick="display('2')">2</button>
+          <button class="opButtons" onclick="display('3')">3</button>
+          <button class="opButtons" onclick="display('+')">+</button>
+          <button class="opButtons" onclick="sign('+','-')">+/-</button>
+          <button class="opButtons" onclick="display('0')">0</button>
+          <button class="opButtons" onclick="display('.')">.</button>
+          <button class="opButtons" onclick="calculate()">=</button>
         </div>
       </div>
     </div>
