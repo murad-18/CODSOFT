@@ -35,6 +35,10 @@ a#skills {
   align-items: center;
   background-color: var(--secondary);
   color: var(--primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 .logo {
   margin: 12px 24px;
@@ -65,6 +69,12 @@ a#skills {
 }
 .navbar > button {
   margin: 18px;
+  transition: all 0.2s;
+}
+#resumebutton:hover {
+  /* color: var(--secondary);
+  background-color: var(--primary);
+  border: 2px solid var(--secondary); */
 }
 .aboutme {
   /* background-color: rgb(252, 217, 171); */
@@ -73,6 +83,7 @@ a#skills {
   justify-content: space-between;
   align-items: center;
   height: 90vh;
+  margin-top: 4rem;
 }
 .mydetails {
   margin: 100px 25px;
@@ -157,29 +168,250 @@ a#skills {
   gap: 30px;
 }
 .skillset-left > .strips {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: var(--primary);
-  color: var(--rest);
-  width: 350px;
-  height: 70px;
-  margin: 12px;
-  padding: 12px;
-  border-radius: 12px;
+  color: var(--secondary);
 }
 .skillset-right > .strips {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+.strips {
+  position: relative;
+  width: 370px;
+  height: 90px;
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--secondary);
-  color: var(--primary);
-  width: 350px;
-  height: 70px;
-  margin: 12px;
-  padding: 12px;
-  border-radius: 12px;
+  font-size: 20px;
+  padding: 0px 12px;
+  font-weight: bold;
+  margin: 12px 24px;
+  border-radius: 15px;
+  cursor: pointer;
 }
+
+.skillset-left > .strips::before,
+.skillset-left > .strips::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #00a499ab;
+  transition: all 0.5s;
+}
+.skillset-right > .strips::before,
+.skillset-right .strips::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #19fff0b5;
+  transition: all 0.5s;
+}
+
+.strips::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.strips::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.strips:hover::before,
+.strips:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+#AI:hover:after {
+  /* content: "I am an AI learner and enthusiast and I have skills in that feild. I have started learning AI 4-5 motnhs ago."; */
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: #004d48;
+  animation: show-AI-transition 0.5s ease-in forwards;
+}
+#ML:hover:after {
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: #004d48;
+  animation: show-ML-transition 0.5s ease-in-out forwards;
+}
+#DL:hover:after {
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: #004d48;
+  animation: show-DL-transition 0.5s ease-in-out forwards;
+}
+#FW:hover:after {
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: #004d48;
+  animation: show-FW-transition 0.5s ease-in-out forwards;
+}
+#Web:hover:after {
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: var(--secondary);
+  animation: show-web-transition 0.5s ease-in-out forwards;
+}
+#Design:hover:after {
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: var(--secondary);
+  animation: show-design-transition 0.5s ease-in-out forwards;
+}
+#C:hover:after {
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: var(--secondary);
+  animation: show-C-transition 0.5s ease-in-out forwards;
+}
+#Python:hover::after {
+  content: "";
+  font-size: 14px;
+  text-align: center;
+  color: var(--secondary);
+  animation: show-python-transition 0.5s ease-in-out forwards;
+}
+@keyframes show-AI-transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "I am an AI learner and enthusiast and I have skills in that feild. I have started learning AI 4-5 motnhs ago.";
+  }
+}
+@keyframes show-ML-transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "I am a ML learner and enthusiast and I have skills in that feild. I have started learning ML 4-5 motnhs ago.";
+  }
+}
+@keyframes show-DL-transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "I am an DL learner and enthusiast and I have skills in that feild. I have started learning DL 4-5 motnhs ago.";
+  }
+}
+@keyframes show-FW-transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "I know the basics frameworks for data analysis and data analyzation. Also for the training and data processing of AI models.";
+  }
+}
+@keyframes show-web-transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "Web Development is my passion and I also love doing it. I have plenty of experience in this feild.";
+  }
+}
+@keyframes show-design-transition {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes show-C-transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "C++ was my first ever language(after javascript) that I learned with my full heart. It is a common language that every beginner must know.";
+  }
+}
+@keyframes show-python-transition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "I have the knowledge of python as I work in AI. I also know some major frameworks related to python.";
+  }
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -274,10 +506,6 @@ a#skills {
   font-size: 18px;
   font-weight: bold;
 }
-.footer {
-  color: var(--rest);
-  /* margin: 4em 0; */
-}
 .contactlogo {
   display: flex;
   justify-content: space-around;
@@ -286,6 +514,13 @@ a#skills {
 }
 .contactlogo > img {
   width: 68px;
+}
+
+.footer {
+  color: var(--rest);
+  /* margin: 4em 0; */
+  padding-top: 12px;
+  background-color: #004d4876;
 }
 .contactinfo {
   color: var(--primary);
@@ -306,4 +541,10 @@ a#skills {
   color: var(--primary);
   font-family: "Source Code Pro", monospace;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.buttons:hover {
+  color: var(--secondary);
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
 }

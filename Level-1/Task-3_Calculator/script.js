@@ -39,7 +39,6 @@ function sign() {
   //   console.log("new equation ", newEquation);
   document.getElementById("equation").value = newEquation;
 }
-
 function resultDisplay() {
   document.getElementById("result").style.opacity = "1";
   document.getElementById("result").style.transition =
@@ -50,4 +49,9 @@ function resultDisplay() {
     "font-size 0.5s ease-in-out";
   document.getElementById("equation").style.top = "10px";
   document.getElementById("equation").style.left = "12px";
+}
+function percent() {
+  let equation = document.getElementById("equation").value;
+  let percentage = eval(equation.replace(/%/g, "/100*"));
+  console.log(percentage);
 }

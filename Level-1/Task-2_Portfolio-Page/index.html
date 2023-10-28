@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <a href="#top" class="topClass">
-        <img class="homelogo" src="images/up-arrow.png" alt="" />
+        <img class="homelogo" src="images/up-arrow-2.png" alt="" />
       </a>
       <div class="header">
         <div class="logo">My Portfolio</div>
@@ -21,7 +21,9 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contactme">Contact Me</a></li>
           </ul>
-          <button type="button" class="buttons">Resume</button>
+          <button id="resumebutton" type="button" class="buttons">
+            Resume
+          </button>
         </div>
       </div>
       <div class="aboutme" id="about">
@@ -46,37 +48,37 @@
       <div class="skills" id="skills">
         <h1 class="skillheader"><span class="headerspan">Ski</span>lls</h1>
         <div class="skillset-left">
-          <div class="strips">
+          <div class="strips" id="Web">
             <div class="skillname">Web Development</div>
             <img src="images/web-dev-logo.png" alt="" class="skilllogo" />
           </div>
-          <div class="strips">
+          <div class="strips" id="Design">
             <div class="skillname">Web Design</div>
             <img src="images/web-design.png" alt="" class="skilllogo" />
           </div>
-          <div class="strips">
+          <div class="strips" id="C">
             <div class="skillname">C++</div>
             <img src="images/C++-logo.png" alt="" class="skilllogo" />
           </div>
-          <div class="strips">
+          <div class="strips" id="Python">
             <div class="skillname">Python</div>
             <img src="images/py-logo.png" alt="" class="skilllogo" />
           </div>
         </div>
         <div class="skillset-right">
-          <div class="strips">
+          <div class="strips" id="AI">
             <div class="skillname">Artificial Intelligence</div>
             <img src="images/AI-logo.png" alt="" class="skilllogo" />
           </div>
-          <div class="strips">
+          <div class="strips" id="ML">
             <div class="skillname">Machine Learning</div>
             <img src="images/ML-logo.png" alt="" class="skilllogo" />
           </div>
-          <div class="strips">
+          <div class="strips" id="DL">
             <div class="skillname">Deep Learning</div>
             <img src="images/DL-logo.png" alt="" class="skilllogo" />
           </div>
-          <div class="strips">
+          <div class="strips" id="FW">
             <div class="skillname">
               Numpy, Pandas, Scikit-Learn, OpenCV, Tensorflow
             </div>
@@ -160,8 +162,6 @@
             </form>
           </div>
           <button class="buttons" type="submit">Submit</button>
-        </div>
-        <div class="footer">
           <div class="contactlogo">
             <img
               src="images/github.png"
@@ -180,6 +180,8 @@
               alt="https://www.flaticon.com/authors/ruslan-babkin"
             />
           </div>
+        </div>
+        <div class="footer">
           <div class="contactinfo">
             <div>Contact Number : +92-322-4580717</div>
             <div>E-mail : muradatfc26@gmail.com</div>
