@@ -301,9 +301,9 @@ a#skills {
     opacity: 0;
     visibility: hidden;
   }
-  80% {
-    opacity: 0;
-    visibility: hidden;
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -316,9 +316,9 @@ a#skills {
     opacity: 0;
     visibility: hidden;
   }
-  80% {
-    opacity: 0;
-    visibility: hidden;
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -331,9 +331,9 @@ a#skills {
     opacity: 0;
     visibility: hidden;
   }
-  80% {
-    opacity: 0;
-    visibility: hidden;
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -346,9 +346,9 @@ a#skills {
     opacity: 0;
     visibility: hidden;
   }
-  80% {
-    opacity: 0;
-    visibility: hidden;
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -361,9 +361,9 @@ a#skills {
     opacity: 0;
     visibility: hidden;
   }
-  80% {
-    opacity: 0;
-    visibility: hidden;
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -372,13 +372,18 @@ a#skills {
   }
 }
 @keyframes show-design-transition {
-  from {
+  0% {
     opacity: 0;
     visibility: hidden;
   }
-  to {
+  99% {
     opacity: 1;
     visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    content: "I use figma in web designing although i am not that good but for work I am the guy you need";
   }
 }
 @keyframes show-C-transition {
@@ -386,9 +391,9 @@ a#skills {
     opacity: 0;
     visibility: hidden;
   }
-  80% {
-    opacity: 0;
-    visibility: hidden;
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -401,9 +406,9 @@ a#skills {
     opacity: 0;
     visibility: hidden;
   }
-  80% {
-    opacity: 0;
-    visibility: hidden;
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 1;
@@ -512,7 +517,7 @@ a#skills {
   cursor: pointer;
   margin: 6em 16em 2em 16em;
 }
-.contactlogo > img {
+.contactlogo > a > img {
   width: 68px;
 }
 
